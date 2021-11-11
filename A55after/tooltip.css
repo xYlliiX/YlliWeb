@@ -1,0 +1,43 @@
+body {
+    font-family: 'Bree Serif', serif;
+    text-align:center;
+}
+
+.tooltip {
+    position:relative;
+    color: rgb(182, 82, 82);
+}
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgb(182, 82, 82) transparent transparent;
+  }
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+.tooltip:before {
+    content: attr(data-text);
+    position:absolute;
+    top:70%;
+    transform:translateY(-50%);
+    left:100%;
+    margin-left:15px;
+    width:200px;
+    padding:0px;
+    border-radius:10px;
+    background:rgb(182, 82, 82);
+    color: #fff;
+    text-align:center;
+    display:none;
+}
+
+.tooltip:hover:before {
+    display:block;
+  }
